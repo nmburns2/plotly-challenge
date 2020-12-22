@@ -26,7 +26,6 @@ init();
 function optionChanged(id) {
     barPlot(id);
     bubbleChart(id);
-    demoGraphic(id);
 };
 
 // Create function for horizontal bar graph
@@ -87,10 +86,10 @@ function bubbleChart(id) {
         mode: 'markers',
         marker: {
             size: sample_values,
+            color: otu_ids,
         },
         type: 'scatter',
         text: otu_labels,
-        color: sample_values,
     };
 
     // Edit Data 
