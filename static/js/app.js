@@ -20,7 +20,7 @@ function init() {
     });
 }
 
-
+// Run function
 init();
 
 
@@ -39,9 +39,9 @@ function barPlot(id) {
     var samp_data = filtered[0];
 
     // Create sample values, ids, and labels
-    var sample_values = samp_data.sample_values.slice(0, 10).reverse();
-    var otu_ids = samp_data.otu_ids.slice(0, 10).reverse();
-    var otu_labels = samp_data.otu_labels.slice(0, 10).reverse();
+    var sample_values = samp_data.sample_values;
+    var otu_ids = samp_data.otu_ids;
+    var otu_labels = samp_data.otu_labels;
 
     // Create trace
     var trace = {
