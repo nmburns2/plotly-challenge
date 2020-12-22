@@ -3,24 +3,22 @@ var id = [];
 var meta = [];
 var samples = [];
 
-
+// Create function to call data 
 function init() {
     d3.json("data/samples.json").then(function (data) {
         id = data.names;
         meta = data.metadata;
         samples = data.samples;
-
+        
+        // Allow user to filter data
         var select = d3.select("#selDataset");
         id.forEach(element => {
             var options = select.append("option");
             options.property("value", element);
             options.text(element);
         });
-            optionChanged(selection.property("value"));
     });
-}
-
-// Run function
+};
 init();
 
 
